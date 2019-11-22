@@ -20,4 +20,12 @@ router.post('/upload', upload.single('file'), function (req, res, next) {
    res.send('ok')
 })
 
+/**
+ * 读取文件
+ */
+router.get('/upload',(req,res)=>{
+  res.send(req.url)
+})
+
+
 module.exports = router;
